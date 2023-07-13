@@ -11,20 +11,20 @@ class Band:
         return self._name
 
     @name.setter
-    def name(self, value):
-        if not isinstance(value, str) or len(value) == 0:
+    def name(self, name):
+        if not isinstance(name, str) or len(name) == 0:
             raise Exception
-        self._name = value
+        self._name = name
 
     @property
     def hometown(self):
         return self._hometown
 
     @hometown.setter
-    def hometown(self, value):
-        if not isinstance(value, str) or len(value) == 0:
+    def hometown(self, hometown):
+        if not isinstance(hometown, str) or len(hometown) == 0:
             raise Exception
-        self._hometown = value
+        self._hometown = hometown
 
     @property
     def concerts(self):

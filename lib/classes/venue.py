@@ -11,20 +11,20 @@ class Venue:
         return self._title
 
     @title.setter
-    def title(self, value):
-        if not isinstance(value, str) or len(value) == 0:
+    def title(self, title):
+        if not isinstance(title, str) or len(title) == 0:
             raise Exception
-        self._title = value
+        self._title = title
 
     @property
     def city(self):
         return self._city
 
     @city.setter
-    def city(self, value):
-        if not isinstance(value, str) or len(value) == 0:
+    def city(self, city):
+        if not isinstance(city, str) or len(city) == 0:
             raise Exception
-        self._city = value
+        self._city = city
 
     @property
     def concerts(self):

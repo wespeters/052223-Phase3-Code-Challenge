@@ -12,32 +12,32 @@ class Concert:
         return self._date
 
     @date.setter
-    def date(self, value):
-        if not isinstance(value, str) or len(value) == 0:
+    def date(self, date):
+        if not isinstance(date, str) or len(date) == 0:
             raise Exception
-        self._date = value
+        self._date = date
 
     @property
     def band(self):
         return self._band
 
     @band.setter
-    def band(self, value):
+    def band(self, band):
         from classes.band import Band
-        if not isinstance(value, Band):
+        if not isinstance(band, Band):
             raise Exception
-        self._band = value
+        self._band = band
 
     @property
     def venue(self):
         return self._venue
 
     @venue.setter
-    def venue(self, value):
+    def venue(self, venue):
         from classes.venue import Venue
-        if not isinstance(value, Venue):
+        if not isinstance(venue, Venue):
             raise Exception
-        self._venue = value
+        self._venue = venue
 
     def hometown_show(self):
         return self._band.hometown == self._venue.city
